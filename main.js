@@ -231,3 +231,5 @@ const todos = [
 
 const descriptionTodo = todos[1].description;
 console.log(descriptionTodo);
+
+// https://www.youtube.com/watch?v=BVrSRTJffxM&ab_channel=FelipeRocha%E2%80%A2dicasparadevs
