@@ -379,6 +379,51 @@ if (sum2 === 4 || sum3 === 10) {
   console.log("Usando a variavel || (ou)");
 }
 
+// -----> Switch-case
+
+const carro = "ferrari";
+
+switch (carro) {
+  case "ferrari":
+    console.log("Vocês escolheu a ferrari!");
+  case "BMW":
+    console.log("Vocês escolheu a BMW!");
+  case "Ford":
+    console.log("Vocês escolheu a Ford!");
+}
+
+//-----------------------------------Truthy & Falsy----------------------------------------------//
+
 /*
-https://www.youtube.com/watch?v=yYc1HQ7pRIo&ab_channel=FelipeRocha%E2%80%A2dicasparadevs
+-> No caso de uma espressão for uma string vazia ou 0, ela retorna SEMPRE "false".
+-> todos os valores são veracidade exceto false, 0, -0, 0n, "", null, undefined, e NaN.
 */
+
+const a = "";
+// FALSE
+
+const b = 0;
+// FALSE
+
+const c = null;
+const d = undefined;
+// FALSE
+
+const list = [];
+// TRUE
+
+const object = {};
+// TRUE
+
+/*
+-> O operador "!" inverte o valor booleano da variavel
+-> O operador "!!" verifica se o valor da variavel é "true" ou "false"
+*/
+
+console.log(!false);
+// TRUE
+
+console.log(!!0);
+// FALSE
+
+// https://www.youtube.com/watch?v=y-KOA4BcqUk&ab_channel=FelipeRocha%E2%80%A2dicasparadevs
