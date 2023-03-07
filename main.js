@@ -209,7 +209,10 @@ console.log(nameDog);
 console.log(age2);
 console.log(age3);
 
-// exemplo pratico trabalhando com listas
+/* 
+-> exemplo pratico trabalhando com listas
+-> const usada nos exemplos do json
+*/
 
 const todos = [
   {
@@ -232,4 +235,16 @@ const todos = [
 const descriptionTodo = todos[1].description;
 console.log(descriptionTodo);
 
-// https://www.youtube.com/watch?v=BVrSRTJffxM&ab_channel=FelipeRocha%E2%80%A2dicasparadevs
+/*
+---------------------------------> JSON
+-> Json são "strings gigantescas" que usamos para passar informações, usado muito
+na passagem de dados de uma API.
+*/
+
+// Convertendo objeto em json
+const todosJSON = JSON.stringify(todos);
+console.log(todosJSON);
+
+// Convertendo json para uma lista
+const todosList = JSON.parse(todosJSON);
+console.log(todosList);
