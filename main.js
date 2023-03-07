@@ -248,3 +248,137 @@ console.log(todosJSON);
 // Convertendo json para uma lista
 const todosList = JSON.parse(todosJSON);
 console.log(todosList);
+
+//---------------------------------------For----------------------------------------------------//
+
+/*
+
+-> for cria um loop até uma determinada condição for concluida.
+-> sintaxe: 
+
+for ([inicialização]; [condição]; [expressão final]) {
+  declaração a ser executada;
+}
+
+Inicialização: 
+Uma expressão (incluindo expressões de atribuição) ou declarações variáveis
+
+condição:
+Uma expressão para ser avaliada antes de cada iteração do loop
+
+expressão final:
+Uma expressão que será validada no final de cada iteração de loop
+
+declaração:
+Uma declaração que é executada enquanto a condição for verdadeira
+
+*/
+
+// printando números
+for (let index = 0; index < 10; index++) {
+  console.log(index);
+}
+
+// percorrendo uma lista com "for"
+const cars = ["ferrari", "BMW", "Tesla"];
+
+// Metodo 1
+for (let i = 0; i < cars.length; i++) {
+  console.log(cars[i]);
+}
+
+// Metodo 2
+for (let car of cars) {
+  console.log(car);
+}
+
+// Metodo 3
+cars.forEach(function (car) {
+  console.log(car);
+});
+
+//--------------------------------------While--------------------------------------------------//
+
+/*
+
+-> while cria um loop até uma determinada condição for concluida.
+-> sintaxe:
+while (condição) {
+  rotina
+}
+
+-> Condição:
+Uma expressão avaliada antes de cada passagem através do laço.
+
+-> rotina:
+Uma declaração que é executada enquanto a condição é avaliada como verdadeira.
+
+*/
+
+let index = 0;
+
+while (index < 10) {
+  console.log(index);
+  index++;
+}
+
+// -----> Exercício usando o "for in"
+const pessoa = {
+  name: "Luka",
+  age: 21,
+};
+
+/*
+-> dando loop para printar todos os conteudos de um objeto 
+-> esse loop não é muito usado
+*/
+for (property in person) {
+  console.log(person[property]);
+}
+
+//------------------------------------Condicionais----------------------------------------------//
+
+/*
+-> Condicional if...else usada em qualquer tipo de linguagem.
+-> Sintaxe:
+
+if (condição1) {
+   instrução1
+} else if {
+    condição2
+}
+.
+.
+.
+else {
+  instruçãoElse
+}
+
+*/
+
+const sum = 1 + 1;
+
+if (sum === 2) {
+  console.log("Soma igual a 2");
+} else if (sum === 3) {
+  console.log("Soma diferente de 2");
+} else {
+  console.log("Soma definitivamente não é 2");
+}
+
+// -----> Condicional com &&(e) e ||(ou)
+
+const sum2 = 2 + 2;
+const sum3 = 10 + 10;
+
+if (sum2 === 4 && sum3 === 10) {
+  console.log("Usando a variavel && (e)");
+}
+
+if (sum2 === 4 || sum3 === 10) {
+  console.log("Usando a variavel || (ou)");
+}
+
+/*
+https://www.youtube.com/watch?v=yYc1HQ7pRIo&ab_channel=FelipeRocha%E2%80%A2dicasparadevs
+*/
