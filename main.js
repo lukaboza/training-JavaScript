@@ -426,4 +426,41 @@ console.log(!false);
 console.log(!!0);
 // FALSE
 
-// https://www.youtube.com/watch?v=y-KOA4BcqUk&ab_channel=FelipeRocha%E2%80%A2dicasparadevs
+//--------------------------------Funções & Arrow Functions-----------------------------------------//
+
+/*
+-> Uma função JavaScript é um bloco de código projetado para executar uma tarefa específica.
+-> Uma função JavaScript é executada quando "algo" a invoca (a chama).
+
+-> Sintaxe:
+function myFunction(p1, p2) {
+  return p1 * p2;
+}
+
+*/
+
+// função criada
+function soma(h, m) {
+  return h + m;
+}
+
+// função invocada
+soma(10, 1);
+
+/*
+-----> Arrow Functions
+-> O Arrow Functions trabalha igual a função normal.
+*/
+
+// nesse exemplo fazemos a mesma coisa que a função padrão.
+const somaArrow = (h, m) => h + m;
+
+// ou... (mesma coisa)
+
+const somaArrow1 = (h, m) => {
+  h + m;
+};
+
+//-----------------------------------POO--------------------------------------------//
+
+// https://www.youtube.com/watch?v=_RKKKDlqi2Q&ab_channel=FelipeRocha%E2%80%A2dicasparadevs
