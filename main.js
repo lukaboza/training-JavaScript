@@ -533,4 +533,92 @@ const dog = new Dog("Bob");
 animal.speak();
 dog.speak();
 
-// https://www.youtube.com/watch?v=csf3dyY4GGg&ab_channel=FelipeRocha%E2%80%A2dicasparadevs
+/**
+ *
+ * -> DOM
+ * -> DOM é a "arvore" HTML (HTML que aparece ao inspencionar elemento no browser),
+ * que é usada para criar/manipular/inputar elementos.
+ *
+ * -> os elementos usado abaixo são de exemplo, mais duvidas acessar vídeo:
+ * https://www.youtube.com/watch?v=csf3dyY4GGg&t=26s&ab_channel=FelipeRocha%E2%80%A2dicasparadevs
+ *
+ */
+
+// -----> 2 METODOS PARA SELECIONAR E ALTERAR UM ELEMENTO DO DOM
+
+/*
+// -> getElementById
+// -> getElementById tras uma referencia do elemento DOM selecionado.
+*/
+
+// puxamos/selecionamos nosso elemento pelo seu ID
+const addUserTextId = document.getElementById("add-user");
+
+//vai aparecer no console "<h1 id="add-user">Add user</h1>"
+console.log(addUserTextId);
+
+// alterando o elemento "Add User" para "Adicionar usuário"
+addUserTextId.innerText = "Adicionar usuário";
+
+/*
+// -> querySelector
+// -> querySelector tras o elemento em si selecionado.
+*/
+
+// seleciona o elemento em si | mais atual | por id usa #
+const addUserText = document.querySelector("#add-user");
+console.log(addUserText);
+// console: h1#add-user
+
+// alterar o elemento 'Add User para Adicionar usuário'
+addUserText.textContent = "Adicionar usuário";
+
+/*
+-> Selecionando mais de um elemento
+*/
+
+// dentro do formulário pega o elemento "my-form" dentro da classe container
+const myForm = document.querySelector(".container #my-form");
+console.log(myForm);
+
+// Seleciona apenas 1 elemento, mesmo dentro a classe tendo mais elementos
+const myForm1 = document.querySelector(".item");
+
+// Para selecionar mais de um elemento (retornando todos)
+const allItems = document.querySelectorAll(".item");
+console.log(allItems);
+
+// selecionando apenas item na posição 1
+console.log(allItems[1]);
+
+//ou
+const allItems1 = document.querySelectorAll(".items .item");
+console.log(allItems);
+
+/**
+ * -----> Manipulando Elementos do DOM
+ */
+
+// Removendo os itens (todos)
+const items = document.querySelector(".items");
+items.remove();
+
+// Remove um item
+items.firstElementChild.remove(); //elimina o primeiro li
+items.lastElementChild.remove(); //elimina o ultimo li
+
+// Mdifica o texto no elemento indicado
+items.children[0].textContent = "Item UM"; //primeiro elemento
+
+// muda o HTML do elemento
+items.lastElementChild.innerHTML = "<h1>Hello world!</h1>";
+
+// alterações que podemos fazer em determinados elementos
+const button = document.querySelector(".btn");
+button.style.background = "red";
+button.style.color = "blue";
+
+/* 
+Exemplos acima são usados mais para deixar a página interativa e executar mudanças
+no HTML, dependendo do evento que ocorrer.
+*/
