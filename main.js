@@ -463,4 +463,74 @@ const somaArrow1 = (h, m) => {
 
 //-----------------------------------POO--------------------------------------------//
 
-// https://www.youtube.com/watch?v=_RKKKDlqi2Q&ab_channel=FelipeRocha%E2%80%A2dicasparadevs
+/*
+-> Programação Orientada a Objetos é usado muito na manipulação de objetos
+-> A classe precisa ser Instanciamos para FUNCIONAR
+-> Apenas os metodos staticos funcionam sem precisar que a classe seja Instanciada
+*/
+
+// criamos o objeto "person" (usando classes)
+class Person {
+  constructor(firstName, LastName, age) {
+    this.firstName = firstName;
+    this.LastName = LastName;
+    this.age = age;
+  }
+
+  // exemplo de um metodo para juntar o "firstName" e "LastName".
+  getFullName() {
+    console.log(`${this.firstName} ${this.LastName}`);
+  }
+
+  // exemplo de metodo statico
+  static hello() {
+    console.log("Hello World!");
+  }
+}
+
+// Instanciamos nosso objeto
+const person = new Person("Luka", "Amaral", "25");
+
+// Por fim, temos nosso objeto criado
+console.log(person);
+
+// Chamada do metodo para juntar os nomes
+person.getFullName();
+
+// Chamada de um metodo STATICO
+Person.hello();
+
+/*
+--------> Herança
+-> Usado para "estender" as classes, usando o metodo de "Herança entre classes"
+*/
+
+class Animal {
+  constructor(name) {
+    this.name = name;
+  }
+
+  speak() {
+    console.log(`${this.name} fez algum barulho!`);
+  }
+}
+
+// classe que se "estende" da classe "Animal"
+class Dog extends Animal {
+  constructor(name) {
+    super(name);
+  }
+
+  // Aqui sobreescrevemos o "speak" do "Animal" e usamos um "speak" novo.
+  speak() {
+    console.log(`${this.name} barked!`);
+  }
+}
+
+const animal = new Animal("Simba");
+const dog = new Dog("Bob");
+
+animal.speak();
+dog.speak();
+
+// https://www.youtube.com/watch?v=csf3dyY4GGg&ab_channel=FelipeRocha%E2%80%A2dicasparadevs
